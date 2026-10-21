@@ -1,17 +1,55 @@
 package ies.puerto;
+import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        float tarifaHora = 1.50f;
+        int totalVehiculos = 0;
+        int totalHorasRegistradas = 0;
+        int totalCalculosTarifa = 0;
+        float importeTotalCalculado = 0f;
+        int opcion = 0;
+        System.out.println("================================" +
+                           "           BIENVENIDO           " +
+                           "================================");
+        System.out.println("  Introduzca nombre de usuario: ");
+        String nombre = teclado.nextLine();
+        System.out.println("Bienvenid@, "+nombre+".");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+
+        do {
+            System.out.println("========================================");
+            System.out.println("              Parking Menu              ");
+            System.out.println("========================================");
+            System.out.println("1.Registrar vehículos");
+            System.out.println("2.Calcular tarifa de estacionamiento");
+            System.out.println("3.Mostrar resumen del día");
+            System.out.println("4.Salir");
+            opcion = teclado.nextInt();
+            teclado.nextLine();
+
+            switch (opcion) {
+                case(1):
+                    System.out.println("a");
+            }
+            switch (opcion) {
+                case(2):
+                    System.out.println("b");
+            }
+            switch (opcion) {
+                case(3):
+                    System.out.println("c");
+            }
+        } while(opcion != 4);
+        // 1. Leer el nombre del usuario.
+        // 2. Repetir el menú con do-while.
+        // 3. Resolver cada opción mediante switch.
+        // 4. Llamar a tus métodos y actualizar acumuladores.
+        // 5. Cerrar Scanner al salir.
+
+        teclado.close();
     }
+
+    // Escribe aquí tus métodos.
 }
